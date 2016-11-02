@@ -20,27 +20,23 @@ angular.module('Assisment', [])
             var strinC = string.length;// store store length of text fileds
             if (strinC > 0) {
                 var countC = string.split(',').length;
+                $scope.msgS = {
+                    "color": "green",
+                    "padding": "5px",
+                    "border":"1px solid green"
+                }
                 if (countC <= 3) {
-                    $scope.msgS = {
-                        "color": "white",
-                        "background-color": "green",
-                        "padding": "5px"
-                    }
                     rMsg = "Enjoy!";
                 } else {
-                    $scope.msgS = {
-                        "color": "white",
-                        "background-color": "red",
-                        "padding": "5px"
-                    }
+
                     rMsg = "Too Much!";
                 }
                 return rMsg;
             } else {
                 $scope.msgS = {
                     "color": "red",
-                    "background-color": "#ccc",
-                    "padding": "5px"
+                    "padding": "5px",
+                    "border":"1px solid red"
                 }
                 rMsg = "Please enter data first!";
                 return rMsg;
